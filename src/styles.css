@@ -29,7 +29,7 @@ header {
 
 .search-button {
   font-size: 16px;
-  padding: 20px 25px;
+  padding: 20px 45px;
   border: none;
   border-radius: 6px;
   background-color: #430843;
@@ -38,6 +38,11 @@ header {
 
 main {
   padding: 30px 20px 0px 20px;
+}
+
+.heading-current-city {
+  font-size: 46px;
+  font-weight: 900;
 }
 
 .current-weather-info {
@@ -56,18 +61,18 @@ main {
 
 .weather-icon {
   position: relative;
-  top: -70px;
+  top: -100px;
   font-size: 60px;
 }
 .weather-value {
   position: relative;
-  top: -70px;
+  top: -100px;
   font-size: 80px;
   font-weight: 900;
 }
 .weather-unit {
   position: relative;
-  top: -105px;
+  top: -135px;
   font-size: 28px;
 }
 
