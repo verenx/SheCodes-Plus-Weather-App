@@ -16,9 +16,10 @@ function searchCity(city) {
 function changeCity(event) {
   event.preventDefault();
   let searchFormElement = document.querySelector("#search-input");
-
   searchCity(searchFormElement.value);
 }
 
 let searchFormButton = document.querySelector("#search-button");
 searchFormButton.addEventListener("click", changeCity);
+
+searchCity("Vienna");
