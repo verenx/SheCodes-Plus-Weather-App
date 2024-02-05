@@ -1,5 +1,5 @@
 body {
-  background-color: #def7f9;
+  background-color: #f2f9f9;
   font-family: "Roboto", sans-serif;
 }
 
@@ -19,7 +19,7 @@ header {
 
 .search-input {
   font-size: 16px;
-  background-color: #def7f9;
+  background-color: #f2f9f9;
   width: 75%;
   padding: 20px 25px;
   border: 1px solid rgba(168, 168, 171, 0.3);
@@ -32,7 +32,7 @@ header {
   padding: 20px 45px;
   border: none;
   border-radius: 6px;
-  background-color: #2f7f88;
+  background-color: #f65292;
   color: white;
 }
 
@@ -57,7 +57,7 @@ main {
 }
 
 .current-weather-details strong {
-  color: #037986;
+  color: #f65292;
 }
 
 .weather-icon {
@@ -88,6 +88,6 @@ footer {
 }
 
 footer a {
-  color: #2f7f88;
+  color: #f65292;
   font-weight: 500;
 }
