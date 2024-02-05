@@ -53,6 +53,7 @@ main {
 .current-weather-details {
   color: rgba(39, 33, 66, 0.4);
   line-height: 24px;
+  font-weight: 400;
 }
 
 .current-weather-details strong {
@@ -62,18 +63,19 @@ main {
 .weather-icon {
   position: relative;
   top: -100px;
-  font-size: 60px;
+  height: 80px;
+  width: 80px;
 }
 .weather-value {
   position: relative;
-  top: -100px;
+  top: -120px;
   font-size: 80px;
   font-weight: 900;
 }
 .weather-unit {
   position: relative;
-  top: -135px;
-  font-size: 28px;
+  top: -155px;
+  font-size: 25px;
 }
 
 footer {
