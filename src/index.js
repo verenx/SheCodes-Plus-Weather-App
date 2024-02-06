@@ -19,6 +19,34 @@ function refreshWeatherData(response) {
   weatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}" />`;
 }
 
+function displayForecast() {
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="row">
+            <div class="col-2">
+              <div class="forecast-day">${day}</div>
+              <div class="forecast-icon">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
+                  alt=""
+                  width="36"
+                />
+              </div>
+              <div class="forecast-temperatures">
+                <span class="forecast-temperature-max"> 18°</span>
+                <span class="forecast-temperature-min"> 9°</span>
+              </div>
+            </div>
+          </div>`;
+  });
+  let forecastElemennt = document.querySelector("#forecast");
+  forecastElemennt.innerHTML = forecastHtml;
+}
+
 function formatDate(date) {
   let days = [
     "Sunday",
@@ -56,3 +84,4 @@ let searchFormButton = document.querySelector("#search-button");
 searchFormButton.addEventListener("click", changeCity);
 
 searchCity("Vienna");
+displayForecast();

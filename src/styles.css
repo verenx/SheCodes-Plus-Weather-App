@@ -78,13 +78,12 @@ main {
   font-size: 25px;
 }
 
-.col-2 {
-  max-width: 10%;
+.weather-forecast {
+  display: flex;
+  justify-content: space-between;
 }
 
-.forecast-day,
-.forecast-icon,
-.forecast-temperatures {
+.col-2 {
   text-align: center;
 }
 
