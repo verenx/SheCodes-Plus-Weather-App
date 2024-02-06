@@ -78,6 +78,20 @@ main {
   font-size: 25px;
 }
 
+.col-2 {
+  max-width: 10%;
+}
+
+.forecast-day,
+.forecast-icon,
+.forecast-temperatures {
+  text-align: center;
+}
+
+.forecast-temperature-min {
+  color: #70757a;
+}
+
 footer {
   font-size: 14px;
   color: rgba(39, 33, 66, 0.4);
