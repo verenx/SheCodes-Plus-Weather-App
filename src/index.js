@@ -17,9 +17,16 @@ function refreshWeatherData(response) {
   windSpeed.innerHTML = `${response.data.wind.speed}km/h`;
   dayAndTime.innerHTML = formatDate(date);
   weatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}" />`;
+  displayForecast(response.data.city);
 }
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "bbb7o8acc1a3c8e9f87003f9494b2cct";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
   let forecastHtml = "";
 
@@ -84,4 +91,3 @@ let searchFormButton = document.querySelector("#search-button");
 searchFormButton.addEventListener("click", changeCity);
 
 searchCity("Vienna");
-displayForecast();
