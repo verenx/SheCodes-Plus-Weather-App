@@ -17,7 +17,7 @@ function refreshWeatherData(response) {
   dayAndTime.innerHTML = formatDate(date);
   weatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}" />`;
 
-  displayForecast(response.data.city);
+  getForecast(response.data.city);
 }
 
 function getForecast(city) {
@@ -26,30 +26,43 @@ function getForecast(city) {
   axios.get(apiUrl).then(displayForecast);
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
+
 function displayForecast(response) {
   console.log(response);
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
   let forecastHtml = "";
 
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `<div class="row">
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        `<div class="row">
             <div class="col-2">
-              <div class="forecast-day">${day}</div>
+              <div class="forecast-day">${formatDay(day.time)}</div>
               <div class="forecast-icon">
                 <img
-                  src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
+                  src="${day.condition.icon_url}"
                   alt=""
-                  width="36"
+                  
                 />
               </div>
               <div class="forecast-temperatures">
-                <span class="forecast-temperature-max"> 18°</span>
-                <span class="forecast-temperature-min"> 9°</span>
+                <div class="forecast-temperature-max">${Math.round(
+                  day.temperature.maximum
+                )}°  </div>
+                <div class="forecast-temperature-min">${Math.round(
+                  day.temperature.minimum
+                )}°</div>
               </div>
             </div>
           </div>`;
+    }
   });
   let forecastElemennt = document.querySelector("#forecast");
   forecastElemennt.innerHTML = forecastHtml;
