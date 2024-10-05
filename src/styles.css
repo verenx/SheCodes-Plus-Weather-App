@@ -158,4 +158,8 @@ body {
   .footer {
     font-size: 10px;;
   }
+
+  .heading-current-city, .current-weather-details {
+    text-align: center;
+  }
 }
