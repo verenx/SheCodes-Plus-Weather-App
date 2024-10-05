@@ -50,7 +50,6 @@ body {
   background-color: #f65292;
   color: white;
   cursor: pointer;
-  flex-shrink: 0;
 }
 
 .main {
@@ -90,6 +89,7 @@ body {
 .weather-icon img {
   vertical-align: top;
 }
+
 .weather-value {
   position: relative;
   font-size: 80px;
@@ -142,3 +142,20 @@ body {
 }
 
 
+@media (max-width: 480px) {
+  .search-input {
+    font-size: 10px;
+  }
+
+  .search-button {
+    font-size: 10px;
+  }
+
+  .weather-value {
+    font-size: 45px;
+  }
+
+  .footer {
+    font-size: 10px;;
+  }
+}
