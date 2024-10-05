@@ -35,15 +35,15 @@ function formatDay(timestamp) {
 
 function displayForecast(response) {
   console.log(response);
-  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  let days = ["Tue", "Wed", "Thu" , "Fri", "Sat"];
   let forecastHtml = "";
 
   response.data.daily.forEach(function (day, index) {
-    if (index < 5) {
+    if (index < 3) {
       forecastHtml =
         forecastHtml +
         `<div class="row">
-            <div class="col-2">
+            <div class="col-12">
               <div class="forecast-day">${formatDay(day.time)}</div>
               <div class="forecast-icon">
                 <img
