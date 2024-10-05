@@ -144,11 +144,11 @@ body {
 
 @media (max-width: 480px) {
   .search-input {
-    font-size: 10px;
+    font-size: 17px;
   }
 
   .search-button {
-    font-size: 10px;
+    font-size: 17px;
   }
 
   .weather-value {
